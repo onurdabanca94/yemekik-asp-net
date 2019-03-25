@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="tr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ye-Mekik.com'a Hoşgeldiniz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+     
+      <link href="dist/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+      <link href="vendor/select2/css/select2.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+      <!--Sonradan Eklenilen CSS'ler-->
+     <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+      	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+      	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="default.aspx">yeMekik.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <asp:Panel ID="Panel1" CssClass="navbar-nav ml-auto" runat="server">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="default.aspx">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kategori.aspx">Kategoriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="istatistik.aspx">İstatistikler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.aspx">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="uyegiris.aspx">Üye Girişi</a>
+            </li>
+          </ul>
+                </asp:Panel>
+            <asp:Panel ID="Panel2" CssClass="navbar-nav ml-auto" runat="server">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+              <a class="nav-link" href="default.aspx">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kategori.aspx">Kategoriler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="istatistik.aspx">İstatistikler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.aspx">Galeri</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Çıkış</a>
+        </li>
+      </ul>
+            </asp:Panel>
+        </div>
+      </div>
+    </nav>
+
+
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+          </asp:ContentPlaceHolder>
+        <!--<div class="container">
+          <h1 class="masthead-heading mb-0">yeMekik'e hoşgeldiniz</h1>
+          <h2 class="masthead-subheading mb-0">Spor ve yemeğin buluşma noktası</h2>
+          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Daha fazla</a>
+        </div>-->
+ 
+	<!--Section kısmı tamamen içerik kısmıdır. 5 kişiye 5 section olacak.-->
+      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+      </asp:ContentPlaceHolder>
+
+        <!--Sayfa içi çıkış komutu-->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Çıkış yapmak istediğinizden emin misiniz?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Eğer çıkış için hazırsanız "çıkış" butonuna basarak oturumu sonlandırabilirsiniz.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+              <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Çıkış" OnClick="Button1_Click" />
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!--Kategori Kısmı için-->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Site içeriği &copy; İnternet Programlama Ekibine aittir. Tüm hakları saklıdır. 2018.</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/select2/js/select2.full.min.js"></script>
+        <script src="dist/js/lightbox.min.js"></script>
+
+        <!--Sonradan Eklenilen Scriptler-->
+        	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+        	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+    </form>
+</body>
+</html>
